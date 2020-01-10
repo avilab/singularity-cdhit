@@ -7,10 +7,10 @@ From: ubuntu:latest
 
 %post
 apt-get update && apt-get -y install \
-  && wget \
-  && build-essential \
-  && zlib1g-dev \
-  && ncbi-blast+
+  wget \
+  build-essential \
+  zlib1g-dev \
+  ncbi-blast+
 
 wget -q  https://github.com/weizhongli/cdhit/releases/download/V4.8.1/cd-hit-v4.8.1-2019-0228.tar.gz \
   && tar xvf cd-hit-v4.8.1-2019-0228.tar.gz --gunzip \
