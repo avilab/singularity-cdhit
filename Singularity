@@ -29,3 +29,4 @@ cd / \
 
 %environment
     export PATH=/usr/local/bin:$PATH
+    export LC_ALL=C
