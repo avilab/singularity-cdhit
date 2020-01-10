@@ -16,9 +16,12 @@ wget -q  https://github.com/weizhongli/cdhit/releases/download/V4.8.1/cd-hit-v4.
   && tar xvf cd-hit-v4.8.1-2019-0228.tar.gz --gunzip \
   && cd cd-hit-v4.8.1-2019-0228 \
   && make \
+  && make install \
   && cd cd-hit-auxtools \
   && make
 
 ## Clean up
-  apt-get clean \
-  && rm -rf /var/lib/apt/lists/
+apt-get clean \
+  && rm -rf /var/lib/apt/lists/ \
+rm cd-hit-v4.8.1-2019-0228.tar.gz
+rm -rf cd-hit-v4.8.1-2019-0228
