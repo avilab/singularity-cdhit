@@ -3,7 +3,6 @@ From: ubuntu:latest
 
 %labels
   Maintainer tpall
-  CD-HIT_Version 4.8.1
 
 %post
 apt-get update && apt-get -y install \
@@ -28,5 +27,5 @@ cd / \
   && rm -rf cdhit
 
 %environment
-    export PATH=/usr/local/bin:$PATH
-    export LC_ALL=C
+  export PATH=/usr/local/bin:$PATH
+  export LC_ALL=C
