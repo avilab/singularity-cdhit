@@ -10,8 +10,7 @@ apt-get update && apt-get -y install \
   build-essential \
   git \
   zlib1g-dev \
-  ncbi-blast+ \
-  python3.7
+  ncbi-blast+
 
 git clone https://github.com/tpall/cdhit.git \
   && cd cdhit \
