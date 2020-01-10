@@ -9,12 +9,13 @@ From: ubuntu:latest
 apt-get update && apt-get -y install \
   wget \
   build-essential \
+  git \
   zlib1g-dev \
   ncbi-blast+
 
-wget -q  https://github.com/weizhongli/cdhit/releases/download/V4.8.1/cd-hit-v4.8.1-2019-0228.tar.gz \
-  && tar xvf cd-hit-v4.8.1-2019-0228.tar.gz --gunzip \
-  && cd cd-hit-v4.8.1-2019-0228 \
+git clone https://github.com/tpall/cdhit.git \
+  && cd cdhit \
+  && git checkout install/psi-cd-hit \
   && make \
   && make install \
   && cd cd-hit-auxtools \
@@ -23,5 +24,8 @@ wget -q  https://github.com/weizhongli/cdhit/releases/download/V4.8.1/cd-hit-v4.
 ## Clean up
 apt-get clean \
   && rm -rf /var/lib/apt/lists/ \
-rm cd-hit-v4.8.1-2019-0228.tar.gz
-rm -rf cd-hit-v4.8.1-2019-0228
+cd / \
+  && rm -rf cdhit
+
+%environment
+    export PATH=/usr/local/bin:$PATH
