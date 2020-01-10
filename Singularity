@@ -23,7 +23,7 @@ git clone https://github.com/tpall/cdhit.git \
 
 ## Clean up
 apt-get clean \
-  && rm -rf /var/lib/apt/lists/ \
+  && rm -rf /var/lib/apt/lists/ 
 cd / \
   && rm -rf cdhit
 
